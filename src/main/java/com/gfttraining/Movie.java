@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Movie {
 
-	private String id;
+	private Integer id;
 	private String original_language;
 	private String original_title;
 	private String overview;
@@ -15,10 +15,11 @@ public class Movie {
 	private boolean video;
 	private double vote_average;
 	private int vote_count;
-	
+
+
 	public Movie(){}
 
-	public Movie(String id, String original_language, String original_title, 
+	public Movie(Integer id, String original_language, String original_title,
 			String overview, double popularity, String release_date, 
 			String title, boolean video, double vote_average, int vote_count) {
 		super();
@@ -35,10 +36,10 @@ public class Movie {
 	}
 
 
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

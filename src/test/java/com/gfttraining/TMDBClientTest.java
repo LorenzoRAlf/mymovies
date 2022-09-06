@@ -8,13 +8,13 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
-public class MovieClientTest {
+public class TMDBClientTest {
 
-	MovieClient client;
+	TMDBClient client;
 	
 	@BeforeEach
 	public void initializeClient() {
-		client = new MovieClient();
+		client = new TMDBClient();
 	}
 	
 	@Test

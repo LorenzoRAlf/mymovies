@@ -1,5 +1,7 @@
 package com.gfttraining;
 
+import com.gfttraining.entities.Movie;
+import com.gfttraining.wrappers.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;

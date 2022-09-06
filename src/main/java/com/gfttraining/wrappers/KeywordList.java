@@ -1,4 +1,6 @@
-package com.gfttraining;
+package com.gfttraining.wrappers;
+
+import com.gfttraining.entities.Keyword;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,5 +1,11 @@
 package com.gfttraining;
 
+import com.gfttraining.entities.Movie;
+import com.gfttraining.wrappers.Credits;
+import com.gfttraining.wrappers.GenreList;
+import com.gfttraining.wrappers.Images;
+import com.gfttraining.wrappers.KeywordList;
+import com.gfttraining.wrappers.MovieList;
 import org.springframework.web.client.RestTemplate;
 
 
@@ -13,7 +19,6 @@ public class TMDBClient {
 	public GenreList getAllGenres() {
 		return restTemplate.getForObject(baseUrl + "/genre/movie/list?api_key=" + authToken, GenreList.class);
 	}
-
 
 	public MovieList getPopularMovies() {
 		return restTemplate.getForObject(baseUrl + "movie/popular?api_key=" + authToken, MovieList.class);

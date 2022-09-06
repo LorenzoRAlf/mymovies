@@ -4,6 +4,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 import static org.hamcrest.Matchers.equalTo;
 
+import com.gfttraining.entities.Movie;
+import com.gfttraining.wrappers.GenreList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -29,7 +31,7 @@ public class TMDBClientTest {
 	public void getAllGenres_isFirstElementGenre_Test() {
 		GenreList genres = client.getAllGenres();
 
-		assertThat(genres.getClass().toString(), equalTo("class com.gfttraining.GenreList"));
+		assertThat(genres.getClass().toString(), equalTo("class com.gfttraining.wrappers.GenreList"));
 	}
 	
 	

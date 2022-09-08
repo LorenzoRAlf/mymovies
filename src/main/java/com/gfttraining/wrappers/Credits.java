@@ -1,4 +1,7 @@
-package com.gfttraining;
+package com.gfttraining.wrappers;
+
+import com.gfttraining.entities.Cast;
+import com.gfttraining.entities.Crew;
 
 import java.util.ArrayList;
 import java.util.List;

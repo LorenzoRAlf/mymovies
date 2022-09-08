@@ -1,4 +1,4 @@
-package com.gfttraining;
+package com.gfttraining.entities;
 
 public abstract class Credit {
 

@@ -1,15 +1,22 @@
-package com.gfttraining;
+package com.gfttraining.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
+@Table(name = "movies")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Movie {
 
+	private boolean adult;
+	private String backdrop_path;
+	@Id
 	private Integer id;
 	private String original_language;
 	private String original_title;
 	private String overview;
 	private double popularity;
+	private String poster_path;
 	private String release_date;
 	private String title;
 	private boolean video;
@@ -19,22 +26,23 @@ public class Movie {
 
 	public Movie(){}
 
-	public Movie(Integer id, String original_language, String original_title,
-			String overview, double popularity, String release_date, 
-			String title, boolean video, double vote_average, int vote_count) {
-		super();
+	public Movie(boolean adult, String backdrop_path, Integer id, String original_language,
+				 String original_title, String overview, double popularity, String poster_path, String release_date,
+				 String title, boolean video, double vote_average, int vote_count) {
+		this.adult = adult;
+		this.backdrop_path = backdrop_path;
 		this.id = id;
 		this.original_language = original_language;
 		this.original_title = original_title;
 		this.overview = overview;
 		this.popularity = popularity;
+		this.poster_path = poster_path;
 		this.release_date = release_date;
 		this.title = title;
 		this.video = video;
 		this.vote_average = vote_average;
 		this.vote_count = vote_count;
 	}
-
 
 	public Integer getId() {
 		return id;
@@ -105,7 +113,28 @@ public class Movie {
 	public void setVote_count(int vote_count) {
 		this.vote_count = vote_count;
 	}
-	
+
+	public boolean isAdult() {
+		return adult;
+	}
+	public void setAdult(boolean adult) {
+		this.adult = adult;
+	}
+
+	public String getBackdrop_path() {
+		return backdrop_path;
+	}
+	public void setBackdrop_path(String backdrop_path) {
+		this.backdrop_path = backdrop_path;
+	}
+
+	public String getPoster_path() {
+		return poster_path;
+	}
+	public void setPoster_path(String poster_path) {
+		this.poster_path = poster_path;
+	}
+
 
 	@Override
 	public String toString() {

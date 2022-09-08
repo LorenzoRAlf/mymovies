@@ -1,4 +1,4 @@
-package com.gfttraining;
+package com.gfttraining.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

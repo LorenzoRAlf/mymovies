@@ -1,10 +1,14 @@
 package com.gfttraining.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
+@Table(name = "movies")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Movie {
 
+	@Id
 	private Integer id;
 	private String original_language;
 	private String original_title;

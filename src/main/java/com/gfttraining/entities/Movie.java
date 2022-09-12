@@ -2,9 +2,8 @@ package com.gfttraining.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Table;
 
-@Table(name = "movies")
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Movie {
 
@@ -22,6 +21,11 @@ public class Movie {
 	private boolean video;
 	private double vote_average;
 	private int vote_count;
+
+
+	private boolean favorite;
+	private Integer personal_rating;
+	private String notes;
 
 
 	public Movie(){}
@@ -42,6 +46,10 @@ public class Movie {
 		this.video = video;
 		this.vote_average = vote_average;
 		this.vote_count = vote_count;
+
+		this.favorite = false;
+		this.personal_rating = null;
+		this.notes = "";
 	}
 
 	public Integer getId() {
@@ -135,6 +143,27 @@ public class Movie {
 		this.poster_path = poster_path;
 	}
 
+
+	public boolean isFavorite() {
+		return favorite;
+	}
+	public void setFavorite(boolean favorite) {
+		this.favorite = favorite;
+	}
+
+	public Integer getPersonal_rating() {
+		return personal_rating;
+	}
+	public void setPersonal_rating(Integer personal_rating) {
+		this.personal_rating = personal_rating;
+	}
+
+	public String getNotes() {
+		return notes;
+	}
+	public void setNotes(String notes) {
+		this.notes = notes;
+	}
 
 	@Override
 	public String toString() {

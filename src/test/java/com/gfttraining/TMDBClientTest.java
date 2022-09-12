@@ -1,13 +1,9 @@
 package com.gfttraining;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-
-import static org.hamcrest.Matchers.equalTo;
 
 import com.gfttraining.entities.Movie;
-import com.gfttraining.wrappers.GenreList;
+import com.gfttraining.repositories.TMDBClient;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
 
 public class TMDBClientTest {

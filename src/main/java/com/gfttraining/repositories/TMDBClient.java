@@ -1,4 +1,4 @@
-package com.gfttraining;
+package com.gfttraining.repositories;
 
 import com.gfttraining.entities.Movie;
 import com.gfttraining.wrappers.Credits;
@@ -28,27 +28,27 @@ public class TMDBClient {
 		return restTemplate.getForObject(baseUrl + "movie/top_rated?api_key=" + authToken, MovieList.class);
 	}
 
-	public Movie getMovie(String id) {
+	public Movie getMovie(Integer id) {
 		return restTemplate.getForObject(baseUrl + "movie/" + id + "?api_key=" + authToken, Movie.class);
 	}
 
-	public Credits getMovieCredits(String id) {
+	public Credits getMovieCredits(Integer id) {
 		return restTemplate.getForObject(baseUrl + "movie/" + id + "/credits?api_key=" + authToken, Credits.class);
 	}
 
-	public Images getMovieImages(String id) {
+	public Images getMovieImages(Integer id) {
 		return restTemplate.getForObject(baseUrl + "movie/" + id + "/images?api_key=" + authToken, Images.class);
 	}
 
-	public KeywordList getMovieKeywords(String id) {
+	public KeywordList getMovieKeywords(Integer id) {
 		return restTemplate.getForObject(baseUrl + "movie/" + id + "/keywords?api_key=" + authToken, KeywordList.class);
 	}
 
-	public MovieList getMovieRecommendations(String id) {
+	public MovieList getMovieRecommendations(Integer id) {
 		return restTemplate.getForObject(baseUrl + "movie/" + id + "/recommendations?api_key=" + authToken, MovieList.class);
 	}
 
-	public MovieList getSimilarMovies(String id) {
+	public MovieList getSimilarMovies(Integer id) {
 		return restTemplate.getForObject(baseUrl + "movie/" + id + "/similar?api_key=" + authToken, MovieList.class);
 	}
 }

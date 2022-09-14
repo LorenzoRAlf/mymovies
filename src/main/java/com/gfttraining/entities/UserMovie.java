@@ -21,24 +21,24 @@ public class UserMovie {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String username;
-    private String title;
+    private Integer movieId;
 
     private boolean favorite;
     @Min(value = 1, message = ValidationError.ratingInterval)
     @Max(value = 5, message = ValidationError.ratingInterval)
-    private Integer personal_rating;
+    private Integer personalRating;
     private String notes;
 
 
     public UserMovie() {
     }
 
-    public UserMovie(Integer id, String username, String title, boolean favorite, Integer personal_rating, String notes) {
+    public UserMovie(Integer id, String username, Integer movie_id, boolean favorite, Integer personal_rating, String notes) {
         this.id = id;
         this.username = username;
-        this.title = title;
+        this.movieId = movie_id;
         this.favorite = favorite;
-        this.personal_rating = personal_rating;
+        this.personalRating = personal_rating;
         this.notes = notes;
     }
 
@@ -57,11 +57,11 @@ public class UserMovie {
         this.username = username;
     }
 
-    public String getTitle() {
-        return title;
+    public Integer getMovie_id() {
+        return movieId;
     }
-    public void setTitle(String title) {
-        this.title = title;
+    public void setMovie_id(Integer movie_id) {
+        this.movieId = movie_id;
     }
 
     public boolean isFavorite() {
@@ -72,10 +72,10 @@ public class UserMovie {
     }
 
     public Integer getPersonal_rating() {
-        return personal_rating;
+        return personalRating;
     }
     public void setPersonal_rating(Integer personal_rating) {
-        this.personal_rating = personal_rating;
+        this.personalRating = personal_rating;
     }
 
     public String getNotes() {
@@ -91,9 +91,9 @@ public class UserMovie {
         return "UserMovie{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
-                ", title='" + title + '\'' +
+                ", movie_id='" + movieId + '\'' +
                 ", favorite=" + favorite +
-                ", personal_rating=" + personal_rating +
+                ", personal_rating=" + personalRating +
                 ", notes='" + notes + '\'' +
                 '}';
     }

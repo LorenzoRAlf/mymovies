@@ -71,8 +71,8 @@ public class MovieController {
     @PatchMapping("movie/{id}")
     public ResponseEntity<UserMovie> saveUserDetails(@PathVariable Integer id, @RequestBody UserMovie movie,
                                                  @AuthenticationPrincipal UserDetails user) {
-        movie.setId(id);
-        movie.setUsername(user.getUsername());
+        movie.setMovie_id(id);
+        movie.setUsername("user");
 
         return new ResponseEntity<>(movieService.saveMovie(movie), null, 201);
     }

@@ -8,5 +8,5 @@ import java.util.Optional;
 
 @Repository
 public interface UserMovieRepository extends CrudRepository<UserMovie, Integer> {
-    Optional<UserMovie> findByUsernameAndId(String username, String id);
+    Optional<UserMovie> findByUsernameAndMovieId(String username, Integer movieId);
 }

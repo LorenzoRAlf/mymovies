@@ -32,7 +32,7 @@ public class MovieService {
     }
 
     public Movie getById(Integer id, UserDetails user) throws NotFoundException {
-        UserMovie userMovie = movieRepository.findByUsernameAndId(user.getUsername(),id.toString()).orElse(null);
+        UserMovie userMovie = movieRepository.findByUsernameAndMovieId("user",id).orElse(null);
         Movie movie = client.getMovie(id);
 
         if(userMovie != null){
